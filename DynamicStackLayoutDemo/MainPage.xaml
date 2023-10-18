@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="DynamicStackLayoutDemo.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:esri="http://schemas.esri.com/arcgis/runtime/2013">
+
+    <Grid>
+        <StackLayout x:Name="SampleStackLayout"
+                     Margin="5"
+                     Padding="5"
+                     Spacing="5"
+                     Style="{DynamicResource EsriSampleStackLayout}">
+            <Label Text="first" />
+            <Label Text="second" />
+            <Button Clicked="Button_Clicked" Text="button" />
+            <esri:MapView x:Name="mapView" Map="{Binding Map}" />
+        </StackLayout>
+    </Grid>
+
+</ContentPage>
